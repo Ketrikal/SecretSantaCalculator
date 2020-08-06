@@ -10,11 +10,12 @@ public class SecretSanta {
         names.add(name);
     }
 
-    public HashMap<String, String> partnerDB = new HashMap<>();
+    public HashMap<String, String> partnerData = new HashMap<>();
 
     public SecretSanta calculatePartners() {
         // TODO: convert method from void in order to avoid editing the existing object too much
 
+        HashMap<String, String> partnerDB = new HashMap<>();
         ArrayList<String> namesCopy = null;
         while (namesCopy == null || namesCopy.size() > 0) {
             namesCopy = SupportMethods.copyStringArrayList(names);
@@ -32,11 +33,13 @@ public class SecretSanta {
                 }
             }
         }
-        return this;
+        SecretSanta temp = this;
+        temp.partnerData = partnerDB;
+        return temp;
     }    
 
     public String getRecipient(String name) {
-        return partnerDB.get(name);
+        return partnerData.get(name);
     }
 }
 
