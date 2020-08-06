@@ -13,7 +13,6 @@ public class SecretSanta {
     public HashMap<String, String> partnerData = new HashMap<>();
 
     public SecretSanta calculatePartners() {
-        // TODO: convert method from void in order to avoid editing the existing object too much
 
         HashMap<String, String> partnerDB = new HashMap<>();
         ArrayList<String> namesCopy = null;
