@@ -33,7 +33,7 @@ public class SecretSanta {
                 }
             }
         }
-        SecretSanta temp = this;
+        SecretSanta temp = this.copyOf();
         temp.partnerData = partnerDB;
         return temp;
     }    
@@ -41,6 +41,17 @@ public class SecretSanta {
     public String getRecipient(String name) {
         return partnerData.get(name);
     }
+
+    private SecretSanta copyOf() {
+        SecretSanta temp = new SecretSanta();
+        temp.names = this.names;
+        return temp;
+    }
+
+    public HashMap<String, String> showPartnerData() {
+        return this.partnerData;
+    }
+
 }
 
 class SupportMethods {

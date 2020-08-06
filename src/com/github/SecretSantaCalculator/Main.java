@@ -14,6 +14,6 @@ public class Main {
         secretSanta.addName("Know");
         System.out.println(secretSanta.partnerData);
         secretSanta.calculatePartners();
-        System.out.println(secretSanta.partnerData);
+        System.out.println(secretSanta.calculatePartners().showPartnerData());
     }
 }
