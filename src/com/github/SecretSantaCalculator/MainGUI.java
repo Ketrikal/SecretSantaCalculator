@@ -1,2 +1,5 @@
-package com.github.SecretSantaCalculator;public class MainGUI {
+package com.github.SecretSantaCalculator;
+
+public class MainGUI {
+
 }
