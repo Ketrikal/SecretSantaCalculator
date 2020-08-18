@@ -23,7 +23,13 @@ public class MainGUI {
         mainTitle.setFont(titleFont);
         mainTitle.setBounds((frame.getWidth() / 2) - 95, 20, 190, 40);
 
+        JTextField textBox = new JTextField();
+        textBox.setBounds(mainTitle.getX(), mainTitle.getY() + 60, 190, 25);
+
+
         panel.add(mainTitle);
+        panel.add(textBox);
+
 
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
