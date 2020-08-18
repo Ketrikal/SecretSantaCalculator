@@ -26,9 +26,17 @@ public class MainGUI {
         JTextField textBox = new JTextField();
         textBox.setBounds(mainTitle.getX(), mainTitle.getY() + 60, 190, 25);
 
+        JButton mpButton = new JButton("Add");
+        mpButton.setBounds(textBox.getX() + ((textBox.getWidth() - 60) / 2), textBox.getY() + 30, 60, 25);
+
+        JButton calcButton = new JButton("Calculate");
+        calcButton.setBounds(mpButton.getX() + ((mpButton.getWidth() - 90) / 2), mpButton.getY() + 30, 90, 25);
+
 
         panel.add(mainTitle);
         panel.add(textBox);
+        panel.add(mpButton);
+        panel.add(calcButton);
 
 
         frame.add(panel);
