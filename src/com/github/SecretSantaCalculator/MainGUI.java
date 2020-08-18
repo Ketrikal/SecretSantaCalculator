@@ -35,7 +35,7 @@ public class MainGUI {
 
         JButton calcButton = new JButton("Calculate");
         calcButton.setBounds(mpButton.getX() + ((mpButton.getWidth() - 90) / 2), mpButton.getY() + 30, 90, 25);
-
+        calcButton.addActionListener(new CalculatePartners());
 
         panel.add(mainTitle);
         panel.add(textBox);

@@ -11,3 +11,11 @@ class AddName implements ActionListener {
         System.out.println(Main.mainSystem.showNameList());
     }
 }
+
+class CalculatePartners implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Main.mainSystem = Main.mainSystem.calculatePartners();
+        System.out.println(Main.mainSystem.showPartnerData());
+    }
+}
