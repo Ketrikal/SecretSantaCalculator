@@ -9,6 +9,9 @@ public class SecretSanta {
     public void addName(String name) {
         names.add(name);
     }
+    public ArrayList showNameList() {
+        return names;
+    }
 
     public HashMap<String, String> partnerData = new HashMap<>();
 
