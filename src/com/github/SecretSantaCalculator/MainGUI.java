@@ -9,9 +9,13 @@ import static java.awt.Color.*;
 public class MainGUI {
 
     public static AddName buttonAddName = new AddName();
+    public static CalculatePartners buttonCalculatePartners = new CalculatePartners();
+    public static QueryPartners buttonQuery = new QueryPartners();
+    public static Exit buttonExit = new Exit();
 
     public static JTextField textBox;
     public static JButton mpButton;
+    public static JButton calcButton;
 
     public MainGUI() {
         JFrame frame = new JFrame();
@@ -36,9 +40,9 @@ public class MainGUI {
         mpButton.setBounds(textBox.getX() + ((textBox.getWidth() - 90) / 2), textBox.getY() + 45, 90, 25);
         mpButton.addActionListener(buttonAddName);
 
-        JButton calcButton = new JButton("Calculate");
+        calcButton = new JButton("Calculate");
         calcButton.setBounds(mpButton.getX(), mpButton.getY() + 30, 90, 25);
-        calcButton.addActionListener(new CalculatePartners());
+        calcButton.addActionListener(buttonCalculatePartners);
 
         panel.add(mainTitle);
         panel.add(textBox);

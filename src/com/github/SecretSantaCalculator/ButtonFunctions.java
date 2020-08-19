@@ -20,7 +20,11 @@ class CalculatePartners implements ActionListener {
 
         MainGUI.mpButton.setText("Query");
         MainGUI.mpButton.removeActionListener(MainGUI.buttonAddName);
-        MainGUI.mpButton.addActionListener(new QueryPartners());
+        MainGUI.mpButton.addActionListener(MainGUI.buttonQuery);
+
+        MainGUI.calcButton.setText("Exit");
+        MainGUI.calcButton.removeActionListener(MainGUI.buttonCalculatePartners);
+        MainGUI.calcButton.addActionListener(MainGUI.buttonExit);
     }
 }
 
