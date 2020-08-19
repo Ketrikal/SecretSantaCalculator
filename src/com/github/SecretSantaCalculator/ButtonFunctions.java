@@ -17,6 +17,23 @@ class CalculatePartners implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Main.mainSystem = Main.mainSystem.calculatePartners();
         System.out.println(Main.mainSystem.showPartnerData());
+
         MainGUI.mpButton.setText("Query");
+        MainGUI.mpButton.removeActionListener(MainGUI.buttonAddName);
+        MainGUI.mpButton.addActionListener(new QueryPartners());
+    }
+}
+
+class QueryPartners implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println(Main.mainSystem.getRecipient(MainGUI.textBox.getText()));
+    }
+}
+
+class Exit implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.exit(0);
     }
 }
