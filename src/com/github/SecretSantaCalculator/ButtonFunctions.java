@@ -17,6 +17,6 @@ class CalculatePartners implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Main.mainSystem = Main.mainSystem.calculatePartners();
         System.out.println(Main.mainSystem.showPartnerData());
-
+        MainGUI.mpButton.setText("Query");
     }
 }
